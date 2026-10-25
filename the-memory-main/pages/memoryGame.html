@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10172a" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="../css/memoryGame.css" />
+    <script src="../js/index.js" defer></script>
+  </head>
+  <body>
+    <main class="game">
+      <header class="game-header">
+        <a class="back-link" href="../index.html">← Home</a>
+        <div class="game-title">
+          <p class="eyebrow">MEMORI'EZ</p>
+          <h1>Memory match</h1>
+        </div>
+        <button class="restart-button" id="restart-button" type="button">Restart</button>
+      </header>
+
+      <section class="game-panel" aria-label="Memory game">
+        <div class="game-info" aria-live="polite">
+          <p id="level">Level 1</p>
+          <p id="timer">Time: 60s</p>
+          <p id="moves">Moves: 0</p>
+        </div>
+        <ul class="cartes" aria-label="Cards"></ul>
+      </section>
+    </main>
+
+    <div class="game-overlay hidden" id="game-overlay" role="dialog" aria-modal="true" aria-labelledby="result-title">
+      <div class="result-card">
+        <p class="eyebrow">MEMORI'EZ</p>
+        <h2 id="result-title"></h2>
+        <p id="result-message"></p>
+        <button class="result-button" id="result-button" type="button"></button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10172a" />
+    <title>Tueur Memory — Memori'ez</title>
+    <link rel="stylesheet" href="../css/TUEURMEMORY.css" />
+    <script src="../js/tueurMemory.js" defer></script>
+  </head>
+  <body>
+    <main class="game">
+      <header class="game-header">
+        <a class="back-link" href="../index.html">← Accueil</a>
+        <div class="game-title">
+          <p class="eyebrow">MEMORI'EZ · MODE DUEL</p>
+          <h1>Tueur Memory</h1>
+        </div>
+        <button class="restart-button" id="restart-button" type="button">Nouvelle partie</button>
+      </header>
+
+      <section class="game-panel" aria-label="Partie de Tueur Memory">
+        <p class="instructions">Deux équipes jouent à tour de rôle. Trouve une paire pour marquer un point et garder la main. En cas d'erreur, le tour passe à l'autre équipe.</p>
+        <div class="game-info" aria-live="polite">
+          <p id="level">Manche 1</p>
+          <p id="timer">Temps : 60 s</p>
+          <p id="turn">Au tour de l'équipe 1</p>
+        </div>
+        <div class="scores" aria-live="polite">
+          <p id="team1-score">Équipe 1 : 0</p>
+          <p id="team2-score">Équipe 2 : 0</p>
+        </div>
+        <ul class="cartes" aria-label="Cartes à retourner"></ul>
+      </section>
+    </main>
+
+    <div class="game-overlay hidden" id="game-overlay" role="dialog" aria-modal="true" aria-labelledby="result-title">
+      <div class="result-card">
+        <p class="eyebrow">MEMORI'EZ · MODE DUEL</p>
+        <h2 id="result-title"></h2>
+        <p id="result-message"></p>
+        <button class="result-button" id="result-button" type="button"></button>
+      </div>
+    </div>
+  </body>
+</html>
